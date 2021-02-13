@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 type UserInfoBlockProps = {
     title: string
     data: string | null | number

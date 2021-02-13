@@ -14,20 +14,19 @@ const MainPage: React.FC<{}> = observer(() => {
         <section>
             <div className="container">
                 <div className="row d-flex mt-3 justify-content-between">
-
                     <InputUser />
                     {
                         mainPage.isLoadedUsers
                             ? mainPage.users.map(user => {
                                 return (
-                                    <UserCard 
+                                    <UserCard
                                         key={user.id}
                                         user={user}
                                     />
                                 )
                             })
                             : <div className="d-flex w-100">
-                                <p 
+                                <p
                                     className="w-100 text-center text-success font-weight-bold"
                                     style={{fontSize: '24px'}}
                                 >
@@ -35,7 +34,6 @@ const MainPage: React.FC<{}> = observer(() => {
                                 </p>
                             </div>
                     }
-
                 </div>
             </div>
         </section>

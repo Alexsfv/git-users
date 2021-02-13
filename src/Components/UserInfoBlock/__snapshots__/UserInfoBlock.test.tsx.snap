@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserInfoBlock component should render UserInfoBlock 1`] = `
+<div
+  className="d-flex w-100 p-3 mb-3 bg-light rounded shadow text-dark font-weight-bold"
+>
+  <p
+    className="w-100 m-0"
+    style={
+      Object {
+        "fontSize": "18px",
+      }
+    }
+  >
+    ssd
+    : 
+  </p>
+  <p
+    className="w-100 m-0 text-right"
+  >
+    11-12-11
+  </p>
+</div>
+`;
+
+exports[`UserInfoBlock component should render UserInfoBlock with link 1`] = `
+<div
+  className="d-flex w-100 p-3 mb-3 bg-light rounded shadow text-dark font-weight-bold"
+>
+  <p
+    className="w-100 m-0"
+    style={
+      Object {
+        "fontSize": "18px",
+      }
+    }
+  >
+    ssd
+    : 
+  </p>
+  <p
+    className="w-100 m-0 text-right"
+  >
+    <a
+      href="https://google.com"
+    >
+      https://google.com
+    </a>
+  </p>
+</div>
+`;

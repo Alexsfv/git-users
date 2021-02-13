@@ -17,7 +17,6 @@ const RepoCardInfo: React.FC<RepoCardInfoProps> = observer(({title, data}) => {
             </div>
         )
     }
-
     return null
 })
 

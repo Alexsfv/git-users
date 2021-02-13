@@ -8,6 +8,7 @@ const InputUser: React.FC<{}> = observer(() => {
 
     const inputUserClasses = ['form-control', 'form-control-lg']
     const inputErrorClasses = ['']
+
     if (mainPage.errorInputMessage) {
         inputUserClasses.push('is-invalid')
         inputErrorClasses.push('invalid-feedback')
@@ -15,7 +16,7 @@ const InputUser: React.FC<{}> = observer(() => {
 
     return (
         <form className="w-100 mb-5" onSubmit={mainPage.getUsersFormHandler}>
-            <input 
+            <input
                 className={inputUserClasses.join(' ')}
                 type="text" placeholder="Введите имя пользователя"
                 onChange={mainPage.changeUserValue}
@@ -24,9 +25,9 @@ const InputUser: React.FC<{}> = observer(() => {
             <div className={inputErrorClasses.join(' ')}>
                 {mainPage.errorInputMessage}
             </div>
-            <input 
-                type="submit" 
-                value="Найти" 
+            <input
+                type="submit"
+                value="Найти"
                 className="btn w-100 btn-success mt-3"
             />
         </form>

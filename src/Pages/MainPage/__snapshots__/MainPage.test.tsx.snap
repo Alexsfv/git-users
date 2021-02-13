@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MainPage component should render UserCard components 1`] = `
+<section>
+  <div
+    class="container"
+  >
+    <div
+      class="row d-flex mt-3 justify-content-between"
+    >
+      <form
+        class="w-100 mb-5"
+      >
+        <input
+          class="form-control form-control-lg"
+          placeholder="Введите имя пользователя"
+          type="text"
+          value=""
+        />
+        <div
+          class=""
+        />
+        <input
+          class="btn w-100 btn-success mt-3"
+          type="submit"
+          value="Найти"
+        />
+      </form>
+      <div
+        class="card mb-5"
+        style="width:18rem"
+      >
+        <img
+          alt="userAvatar"
+          class="card-img-top"
+          src="https://google.com"
+        />
+        <div
+          class="card-body"
+        >
+          <h5
+            class="card-title"
+          >
+            user-login
+          </h5>
+          <a
+            class="btn btn-primary"
+            href="/userPage/user-login"
+          >
+            Открыть профиль
+          </a>
+        </div>
+      </div>
+      <div
+        class="card mb-5"
+        style="width:18rem"
+      >
+        <img
+          alt="userAvatar"
+          class="card-img-top"
+          src="https://google.com"
+        />
+        <div
+          class="card-body"
+        >
+          <h5
+            class="card-title"
+          >
+            user-login
+          </h5>
+          <a
+            class="btn btn-primary"
+            href="/userPage/user-login"
+          >
+            Открыть профиль
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+`;
+
+exports[`MainPage component should render placeholder data 1`] = `
+<section>
+  <div
+    class="container"
+  >
+    <div
+      class="row d-flex mt-3 justify-content-between"
+    >
+      <form
+        class="w-100 mb-5"
+      >
+        <input
+          class="form-control form-control-lg"
+          placeholder="Введите имя пользователя"
+          type="text"
+          value=""
+        />
+        <div
+          class=""
+        />
+        <input
+          class="btn w-100 btn-success mt-3"
+          type="submit"
+          value="Найти"
+        />
+      </form>
+      <div
+        class="d-flex w-100"
+      >
+        <p
+          class="w-100 text-center text-success font-weight-bold"
+          style="font-size:24px"
+        >
+          Данное приложение осуществляет поиск GitHub акаунтов по логину пользователя
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+`;

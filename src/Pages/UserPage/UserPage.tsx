@@ -36,58 +36,58 @@ const UserPage: React.FC<UserPageProps> = observer((props) => {
                     ? <div className="row d-flex flex-nowrap justify-content-around  align-items-start align-content-startmt-5 pt-3 px-3 my-4 text-white bg-primary rounded">
                         <div className="d-flex col-5 align-self-center flex-wrap align-items-start align-content-start">
         
-                            <UserInfoBlock 
+                            <UserInfoBlock
                                 title="Город"
                                 data={userPage.location}
                             />
 
-                            <UserInfoBlock 
+                            <UserInfoBlock
                                 title="Email"
                                 data={userPage.email}
                             />
 
-                            <UserInfoBlock 
+                            <UserInfoBlock
                                 title="Репозитории"
                                 data={userPage.public_repos}
                             />
 
-                            <UserInfoBlock 
+                            <UserInfoBlock
                                 title="Gists"
                                 data={userPage.public_gists}
                             />
 
-                            <UserInfoBlock 
+                            <UserInfoBlock
                                 title="Подписчики"
                                 data={userPage.followers}
                             />
 
-                            <UserInfoBlock 
+                            <UserInfoBlock
                                 title="Подписан"
                                 data={userPage.following}
                             />
 
-                            <UserInfoBlock 
+                            <UserInfoBlock
                                 title="Блог"
                                 data={userPage.blog}
                             />
 
-                            <UserInfoBlock 
+                            <UserInfoBlock
                                 title="Статус"
                                 data={userPage.bio}
                             />
 
-                            <UserInfoBlock 
+                            <UserInfoBlock
                                 title="Создан"
                                 data={userPage.created_at}
                             />
 
-                            <UserInfoBlock 
+                            <UserInfoBlock
                                 title="Обновлен"
                                 data={userPage.updated_at}
                             />
-        
+
                         </div>
-    
+
                         <UserMainInfoBlock />
 
                     </div>

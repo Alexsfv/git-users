@@ -14,37 +14,37 @@ const RepoCard: React.FC<RepoCardProps> = observer(({repo}) => {
             <div className="d-flex flex-column card-body">
                 <h3 className="card-title text-success">{repo.name}</h3>
 
-                    <RepoCardInfo 
+                    <RepoCardInfo
                         title={'Описание'}
                         data={repo.description}
                     />
 
-                    <RepoCardInfo 
+                    <RepoCardInfo
                         title={'Язык'}
                         data={repo.language}
                     />
 
-                    <RepoCardInfo 
+                    <RepoCardInfo
                         title={'Создан'}
                         data={getTimeString(repo.created_at)}
                     />
 
-                    <RepoCardInfo 
+                    <RepoCardInfo
                         title={'Обновлен'}
                         data={getTimeString(repo.updated_at)}
                     />
 
-                    <RepoCardInfo 
+                    <RepoCardInfo
                         title={'Forks'}
                         data={repo.forks}
                     />
 
-                    <RepoCardInfo 
+                    <RepoCardInfo
                         title={'Watchers'}
                         data={repo.watchers}
                     />
 
-                    <RepoCardInfo 
+                    <RepoCardInfo
                         title={'Open Issues'}
                         data={repo.open_issues}
                     />

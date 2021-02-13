@@ -12,6 +12,8 @@ export interface IUserPageStore extends GithubUserPage {
     getUserData: (login: string) => void
     clearUserPage: () => void
     catchErrorRosponse: (status: number) => void
+    setErrorMessage: (message: string) => void
+    setIsExists: (val: boolean) => void
 }
 
 const userPageStore: IUserPageStore = {
@@ -38,8 +40,8 @@ const userPageStore: IUserPageStore = {
             if (response.status === 200) {
                 const userData: GithubUserPage = await response.json()
                 runInAction(() => {
-                    this.isExists = true
-                    this.errorMessage = ''
+                    this.setIsExists(true)
+                    this.setErrorMessage('')
                     this.login = userData.login
                     this.avatar_url = userData.avatar_url
                     this.name = userData.name
@@ -64,16 +66,16 @@ const userPageStore: IUserPageStore = {
     catchErrorRosponse(status: number) {
             if (status === 404) {
                 runInAction(() => {
-                    this.isExists = false
-                    this.errorMessage = 'Пользователь с таким логином не существует'
+                    this.setIsExists(false)
+                    this.setErrorMessage('Пользователь с таким логином не существует')
                 })
             } else if (status === 403) {
                 runInAction(() => {
-                    this.errorMessage = 'Превышен лимит запросов, попробуйте позже'
+                    this.setErrorMessage('Превышен лимит запросов, попробуйте позже')
                 })
             } else {
                 runInAction(() => {
-                    this.errorMessage = 'Что-то пошло не так'
+                    this.setErrorMessage('Что-то пошло не так')
                 })
             }
     },
@@ -94,6 +96,12 @@ const userPageStore: IUserPageStore = {
         this.bio = null
         this.created_at = ''
         this.updated_at = ''
+    },
+    setErrorMessage(message: string) {
+        this.errorMessage = message
+    },
+    setIsExists(value: boolean) {
+        this.isExists = value
     }
 }
 
@@ -116,7 +124,9 @@ const userPageAnnotations = {
     updated_at: observable,
     getUserData: action.bound,
     clearUserPage: action.bound,
-    catchErrorRosponse: action.bound
+    catchErrorRosponse: action.bound,
+    setErrorMessage: action.bound,
+    setIsExists: action.bound,
 }
 
 

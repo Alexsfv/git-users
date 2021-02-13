@@ -3,13 +3,13 @@ import { rootStoreType, StoreContextProps } from '../types/types'
 import { MainPageStore, UserPageStore } from './index'
 import { RepositoriesStore } from './RepositoriesStore'
 
-const rootStore: rootStoreType = {
+export const rootStore: rootStoreType = {
     mainPage: new MainPageStore(),
     userPage: UserPageStore(),
     repositories: new RepositoriesStore()
 }
 
-const storeContext = createContext<rootStoreType | null>(null)
+export const storeContext = createContext<rootStoreType | null>(null)
 
 export const StoreContext: React.FC<StoreContextProps> = ({children}) => {
     return (
